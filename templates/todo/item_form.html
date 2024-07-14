@@ -16,6 +16,9 @@
 
     <div>
         <a href="{% url 'home' %}">Go back?</a>
+        {% if object.id %}
+            <a href="{% url 'item-delete' todo_list.id object.id %}">Delete this task</a>
+        {% endif %}
     </div>
 
 {% endblock content %}

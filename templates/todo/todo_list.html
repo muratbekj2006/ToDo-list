@@ -1,6 +1,6 @@
 
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <div>
     <div>
@@ -21,6 +21,7 @@
         </ul>
         <p>
             <a href="{% url 'task-add' todo_list.id %}">Add new task</a>
+            <a href="{% url 'list-delete' todo_list.id %}">Delete this list</a>
         </p>
     </div>
     

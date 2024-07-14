@@ -72,9 +72,11 @@ class ItemUpdateTaskView(UpdateView):
 class ListDeleteView(DeleteView):
     model = ToDoList
     success_url = reverse_lazy('index')
+    template_name = 'todo/todo_list-delete.html'
 
 class TaskDeleteView(DeleteView):
     model = TodoItem
+    template_name = 'todo/todo_item-delete.html'
 
     def get_success_url(self):
         return reverse_lazy('todo-list', args=[self.kwargs['list_id']])
