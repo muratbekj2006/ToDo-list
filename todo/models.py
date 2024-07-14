@@ -17,19 +17,12 @@ class ToDoList(models.Model):
     def __str__(self):
         return self.title
 
-class ToDoType(models.Model):
-    title = models.CharField(max_length=100, unique=True)
-
-    def __str__(self):
-        return self.title
-
 class TodoItem(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
     created_date = models.DateField(auto_now_add=True)
     due_date = models.DateField(default=one_week)
     todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
-    task_type = models.ForeignKey(ToDoType, on_delete=models.CASCADE, null=True)
 
     def get_absolute_url(self):
         return reverse('item-update', args=[str(self.todo_list.id), str(self.id)])
