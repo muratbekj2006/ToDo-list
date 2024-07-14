@@ -11,13 +11,7 @@
         <li>
             <a href="{% url 'todo-list' todolist.id %}"><h4>{{todolist.title}}</h4></a>
         </li>
-        {% empty %}
-        <h4>You have no lists</h4>
         {% endfor %}
     </ul>
-
-    <p>
-        <a href="{% url 'todo-list-add' %}">Add new list</a>
-    </p>
 
 {% endblock content %}

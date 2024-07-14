@@ -23,15 +23,6 @@ class ItemListView(ListView):
         context['object_list'] = TodoItem.objects.filter(todo_list=context['todo_list'])
         return context
 
-class ListCreateView(CreateView):
-    model = ToDoList
-    fields = ['title']
-    template_name = 'todo/todolist_form.html'
-
-    def get_context_data(self):
-        context = super(ListCreateView, self).get_context_data()
-        context['title'] = 'Add a new list'
-        return context
 
 class ItemTaskCreateView(CreateView):
     model = TodoItem
@@ -68,11 +59,6 @@ class ItemUpdateTaskView(UpdateView):
     def get_success_url(self):
         return reverse('todo-list', args=[self.object.todo_list_id])
 
-
-class ListDeleteView(DeleteView):
-    model = ToDoList
-    success_url = reverse_lazy('index')
-    template_name = 'todo/todo_list-delete.html'
 
 class TaskDeleteView(DeleteView):
     model = TodoItem
