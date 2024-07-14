@@ -12,8 +12,7 @@
             {% for todo in object_list %}
             <li>
                 <div>
-
-                    <a href="{% url 'item-update' todo_list.id todo.id%}"><p>{{ todo.title }} (Due {{todo.due_date}})</p></a>
+                    <a href="{% url 'item-update' todo_list.id todo.id %}"><p>{{ todo.title }} (Due {{ todo.due_date }})</p></a>
                 </div>
             </li>
             {% empty %}
@@ -21,8 +20,9 @@
             {% endfor %}
         </ul>
         <p>
-            <a href="{% url 'item-add' todo_list.id %}">Add new task</a>
+            <a href="{% url 'task-add' todo_list.id %}">Add new task</a>
         </p>
     </div>
+    
 </div>
 {% endblock %}
