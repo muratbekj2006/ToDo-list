@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
     <h3>{{ title }}</h3>
@@ -8,16 +7,18 @@
         <div>
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Save">
+                <table class="form-table">
+                    {{ form.as_table }}
+                </table>
+                <input type="submit" value="Save" class="button">
             </form>
         </div>
     </div>
 
     <div>
-        <a href="{% url 'home' %}">Go back?</a>
+        <a href="{% url 'home' %}" class="button">Go back?</a>
         {% if object.id %}
-            <a href="{% url 'item-delete' todo_list.id object.id %}">Delete this task</a>
+            <a href="{% url 'item-delete' todo_list.id object.id %}" class="button">Delete this task</a>
         {% endif %}
     </div>
 

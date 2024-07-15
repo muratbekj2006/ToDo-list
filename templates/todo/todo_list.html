@@ -1,26 +1,26 @@
 
 {% extends "base.html" %}
-{% load static %}
 {% block content %}
 <div>
     <div>
         <div>
-            <h3>Edit list:</h3>
-            <h5>{{ todo_list.title | upper }}</h5>
+            <h5 class="index_header list_items">{{ todo_list.title | upper }}</h5>
         </div>
-        <ul>
+        <ul class="todolist">
             {% for todo in object_list %}
-            <li>
+            <li class="todolist__item">
                 <div>
-                    <a href="{% url 'item-update' todo_list.id todo.id %}"><p>{{ todo.title }} (Due {{ todo.due_date }})</p></a>
+                    <a href="{% url 'item-update' todo_list.id todo.id %}" class="todolist__item_action">
+                        <p>{{ todo.title }} (Due {{ todo.due_date }})</p>
+                    </a>
                 </div>
             </li>
             {% empty %}
-            <p>There are no to-do items in this list.</p>
+            <p class="empty_forloop">There are no to-do items in this list.</p>
             {% endfor %}
         </ul>
         <p>
-            <a href="{% url 'task-add' todo_list.id %}">Add new task</a>
+            <a href="{% url 'task-add' todo_list.id %}" class="button">Add new task</a>
         </p>
     </div>
     

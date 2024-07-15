@@ -2,16 +2,20 @@
 
 {% block content %}
 
-    {% if object_list %}
-        <h3>All lists</h3>
-    {% endif %}
+    <div class="todolist__container">
 
-    <ul>
-        {% for todolist in object_list %}
-        <li>
-            <a href="{% url 'todo-list' todolist.id %}"><h4>{{todolist.title}}</h4></a>
-        </li>
-        {% endfor %}
-    </ul>
+        <div class="index_header">
+            {% if object_list %}
+                <h3 class="index_header__h3">All lists</h3>
+            {% endif %}
+        </div>
+        <ul class="todolist">
+            {% for todolist in object_list %}
+            <li class="todolist__item">
+                <a href="{% url 'todo-list' todolist.id %}" class="todolist__item_action"><h4 class="todolist__item_action-heading">{{todolist.title}}</h4></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 
 {% endblock content %}
