@@ -1,10 +1,15 @@
   ## ToDo-list
 A simple todo list application that I created using Django framework. It was created for me to further and practise my knowledge in Django.
 I have learnt the concepts:
-- CRUD operations
+- CRUD (Create, Read, Update, Delete) operations
 - Data storages
 - User input
 
+  ## Features
+  - Create, read, update, and delete tasks
+  - User authentication
+  - Admin dashboard for managing tasks
+ 
   ## Installation
 
 Clone the project to you desktop
