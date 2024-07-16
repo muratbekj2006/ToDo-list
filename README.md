@@ -7,12 +7,17 @@ I have learnt the concepts:
 
   ## Installation
 
+Clone the project to you desktop
+```bash
+git clone https://github.com/muratbekj2006/ToDo-list.git
+```
+
 Python and Django need to be installed
 
 1. On terminal open the folder
    
 ```bash
-cd location_of_the_folder
+cd location_of_the_project
 ```
 
 2. Install django and virtual enviroment together
