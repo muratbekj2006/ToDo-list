@@ -4,11 +4,6 @@ I have learnt the concepts:
 - CRUD (Create, Read, Update, Delete) operations
 - Data storages
 - User input
-
-  ## Features
-  - Create, read, update, and delete tasks
-  - User authentication
-  - Admin dashboard for managing tasks
  
   ## Installation
 
