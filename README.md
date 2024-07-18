@@ -1,5 +1,5 @@
   ## ToDo-list
-A simple todo list application that I created using Django framework. It was created for me to further and practise my knowledge in Django.
+A simple todo list application that I created using Django framework (Without the checkbox functionality, in the future I will add more features to it). It was created for me to further and practise my knowledge in Django.
 I have learnt the concepts:
 - CRUD (Create, Read, Update, Delete) operations
 - Data storages
